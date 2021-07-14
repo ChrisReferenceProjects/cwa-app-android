@@ -5,6 +5,8 @@ workflows:
     instance_type: mac_mini
     environment:
       node: latest
+      vars:
+        SONAR_TOKEN: Encrypted(Z0FBQUFBQmc3ckExSkpERjNtWVRrLWlnZGlCeHk0cWVLMHZvRFBJZ0pQZWlNRGp0NTNTQUtYY3hjd1JGZEMwNlUyWW91Y0NYbHlqdmkzTzMyeWFFZHlNUl91SXJJSm1lbGhZb3VlNjh0ZkxXSFBlRDBRbUtaSmg3UDJZRzZGTFN2akVuYXRtNmswdDM=)
     triggering:
       events:
         - push
@@ -18,6 +20,6 @@ workflows:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"       
       - name: Build Android app
-        script: ./gradlew assembleRelease
+        script: ./gradlew assembleRelease sonarqube
     artifacts:
       - app/build/outputs/**/**/*.apk
