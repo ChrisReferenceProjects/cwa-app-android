@@ -7,7 +7,7 @@ workflows:
       node: latest
       vars:
         SONAR_HOST_URL: https://chvd.eu.ngrok.io
-        SONAR_TOKEN: Encrypted(Z0FBQUFBQmhDanh5SzU4T1RQTk9ldEdPcThvN096bVdfRFAzR01nbFkwb0VzdHIyT2ZXMlRROU4wMTBHMDRTV3JfOTByNGRYaEY3UlFGbjBIY0FkX1N0bVh4VDZQbGNmT0t4Z1Nha2lZeW5yU2JNUmV4N2lKUlk3bmF2RWpRODFBNXphaXBNTnBQUmM=)
+        SONAR_TOKEN: Encrypted(Z0FBQUFBQmhDbHRhWHFBNTR6QTlZYm1COGVzUl9Fak00dXpsNng1STRhcnJFVUhhQjBjS2tmNmpJQjZGWjJkNzlNZjRGVUhLQ2JlNVdKN3lwUnZlRDh4RHRsd0JPWmRoTE1acjc0V1ZVVTczUmlBTFFwc20tSG5Ucmg3aFZBSkdVMllTQUdVMmtwQ2k=)
     triggering:
       events:
         - push
