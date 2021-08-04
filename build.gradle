@@ -98,3 +98,6 @@ task quickBuildWithFixes {
     dependsOn ':Corona-Warn-App:ktlintDeviceReleaseCheck'
     dependsOn ':Corona-Warn-App:detekt'
 }
+plugins {
+  id "org.sonarqube" version "3.3"
+}
