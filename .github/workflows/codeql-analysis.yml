@@ -59,7 +59,7 @@ jobs:
       uses: Raul6469/android-gradle-action@2.0.0
       with:
         # The ./gradlew command arguments
-        script: ./gradlew assembleRelease
+        script: assembleRelease
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
