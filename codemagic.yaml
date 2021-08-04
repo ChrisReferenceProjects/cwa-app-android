@@ -6,6 +6,7 @@ workflows:
     environment:
       node: latest
       vars:
+        SONAR_HOST_URL: https://chvd.eu.ngrok.io
         SONAR_TOKEN: Encrypted(Z0FBQUFBQmhDanh5SzU4T1RQTk9ldEdPcThvN096bVdfRFAzR01nbFkwb0VzdHIyT2ZXMlRROU4wMTBHMDRTV3JfOTByNGRYaEY3UlFGbjBIY0FkX1N0bVh4VDZQbGNmT0t4Z1Nha2lZeW5yU2JNUmV4N2lKUlk3bmF2RWpRODFBNXphaXBNTnBQUmM=)
     triggering:
       events:
@@ -20,6 +21,9 @@ workflows:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"       
       - name: Build Android app
-        script: ./gradlew assembleRelease sonarqube
+        script: ./gradlew assembleRelease sonarqube \
+          -Dsonar.projectKey=ChrisReferenceProjects_cwa-app-android \
+          -Dsonar.host.url=$SONAR_HOST_URL \
+          -Dsonar.login=$SONAR_TOKEN
     artifacts:
       - app/build/outputs/**/**/*.apk
