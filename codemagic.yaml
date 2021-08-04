@@ -6,7 +6,7 @@ workflows:
     environment:
       node: latest
       vars:
-        SONAR_TOKEN: Encrypted(Z0FBQUFBQmc3ckExSkpERjNtWVRrLWlnZGlCeHk0cWVLMHZvRFBJZ0pQZWlNRGp0NTNTQUtYY3hjd1JGZEMwNlUyWW91Y0NYbHlqdmkzTzMyeWFFZHlNUl91SXJJSm1lbGhZb3VlNjh0ZkxXSFBlRDBRbUtaSmg3UDJZRzZGTFN2akVuYXRtNmswdDM=)
+        SONAR_TOKEN: Encrypted(Z0FBQUFBQmhDanh5SzU4T1RQTk9ldEdPcThvN096bVdfRFAzR01nbFkwb0VzdHIyT2ZXMlRROU4wMTBHMDRTV3JfOTByNGRYaEY3UlFGbjBIY0FkX1N0bVh4VDZQbGNmT0t4Z1Nha2lZeW5yU2JNUmV4N2lKUlk3bmF2RWpRODFBNXphaXBNTnBQUmM=)
     triggering:
       events:
         - push
