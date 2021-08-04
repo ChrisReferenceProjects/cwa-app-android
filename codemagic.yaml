@@ -21,9 +21,6 @@ workflows:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"       
       - name: Build Android app
-        script: ./gradlew assembleRelease sonarqube \
-          -Dsonar.projectKey=ChrisReferenceProjects_cwa-app-android \
-          -Dsonar.host.url=$SONAR_HOST_URL \
-          -Dsonar.login=$SONAR_TOKEN
+        script: ./gradlew assembleRelease sonarqube -Dsonar.projectKey=ChrisReferenceProjects_cwa-app-android -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_TOKEN
     artifacts:
       - app/build/outputs/**/**/*.apk
